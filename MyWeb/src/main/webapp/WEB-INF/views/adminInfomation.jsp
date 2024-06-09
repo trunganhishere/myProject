@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,42 +10,9 @@
 </head>
 
 <body class="bg-dark">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand text-success">trungAnh</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pic.html">Picture</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        More
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="gioiThieu.html">About me</a></li>
-                        <li><a class="dropdown-item" href="lienHe.html">Contact</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Chào!</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<br>
+<%@ include file="headerAdmin.jsp" %>
 <div class="container-fluid text-center">
-    <a style="color:white ;font-size: 300%; font-weight: bold;">Giới thiệu</a>
+    <a style="color:white ;font-size: 300%; font-weight: bold;">Infomation</a>
 </div>
 <div style="text-align: center; padding-top: 5%;">
     <a style="color: white ; font-size: 200%; font-weight: bolder;">Dương Trung Anh</a>

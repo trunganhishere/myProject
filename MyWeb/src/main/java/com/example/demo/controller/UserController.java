@@ -26,16 +26,30 @@ public class UserController {
     @Autowired
     ImageInterface ii;
 
+    @Autowired
+    HomeController hc;
+
+    @GetMapping("/home")
+    public String nonUserHome(Model model){
+        model.addAttribute("myInfomation",u.getReferenceById(1));
+        model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
+        model.addAttribute("homeImage",ii.findByName("home_image"));
+        return "nonUserHome";
+    }
+
     @GetMapping("/admin/home")
     public String adminHome(Model model){
-        model.addAttribute("infomation",u.getReferenceById(1));
+        model.addAttribute("myInfomation",u.getReferenceById(1));
+        model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
         model.addAttribute("homeImage",ii.findByName("home_image"));
         return "adminHome";
     }
 
     @GetMapping("/user/home")
     public String userHome(Model model){
-        model.addAttribute("infomation",u.getReferenceById(1));
+        model.addAttribute("myInfomation",u.getReferenceById(1));
+        model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
+        model.addAttribute("homeImage",ii.findByName("home_image"));
         return "userHome";
     }
 

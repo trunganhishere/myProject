@@ -29,4 +29,7 @@ public class Image {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "col")
+    private int col;
 }

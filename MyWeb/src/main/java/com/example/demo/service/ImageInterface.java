@@ -11,6 +11,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface ImageInterface extends JpaRepository<Image,Integer> {
-    @Query("select i from Image i where i.name = :name")
-    ArrayList<Image> findByName(@Param("name") String name);
+    @Query("select i from Image i where i.name = :name ORDER BY i.id DESC")
+    ArrayList<Image> findByName(String name);
 }

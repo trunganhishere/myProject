@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="bg-dark">
-
+<%@ include file="headerNonUser.jsp"%>
 <form class="shadow-lg p-3 mb-5 bg-body-tertiary rounded col-7" style="margin-top: 12%; margin-left: 23%" action="/checking" method="get">
     <p class="h1 text-center">SIGN IN</p>
     <div class="position-relative mt-3">
