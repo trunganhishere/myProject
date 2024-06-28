@@ -12,31 +12,52 @@
 <div class="container-fluid text-center" style="padding-top: 2%; padding-bottom: 5%;">
     <a style="color:white ;font-size: 300%; font-weight: bold;">Contact</a>
 </div>
-<div class="container-fluid row" style="justify-content: center;display: flex;">
-    <div class="alert alert-light col-3" role="alert" style="border: 2px solid blue;">
-        <a class="btn text-info" href="https://www.facebook.com/trunganhishere" style="justify-content: space-around; font-weight: bolder; font-size: x-large; margin-top: 1ch;">
-            <img src="blue-social-media-logo_197792-1759.avif" style="padding-bottom: 5px;" class="col-lg-2 col-11">
-            Facebook
-        </a>
+<div class="container row" style="justify-content: center;display: flex;">
+    <div class="col-0 col-lg-1">
     </div>
+    <a class="btn btn-outline-primary col-10 col-lg-3 btn-lg" href="https://www.facebook.com/trunganhishere">
+        <img src="https://freepnglogo.com/images/all_img/1713419166FB_Logo_PNG.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        Facebook
+    </a>
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <div class="alert alert-light col-3" role="alert" style="border: 2px solid red;">
-        <a class="btn text-danger" href="https://www.instagram.com/trunganhisheree/" style="justify-content: space-around; font-weight: bolder; font-size: x-large; margin-top: 1ch;">
-            <img src="logo-instagram-vector.jpg" style="padding-bottom: 5px;" class="col-lg-2 col-11">
-            Instagram
-        </a>
-    </div>
+    <a class="btn btn-outline-success col-10 col-lg-3 btn-lg" href="http://m.me/trunganhishere">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/640px-Facebook_Messenger_logo_2020.svg.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        Messenger
+    </a>
+
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <div class="alert alert-light col-3" role="alert" style="border: 2px solid black;">
-        <a class="btn text-dark" href="https://www.tiktok.com/@trunganhishere" style="justify-content: space-around; font-weight: bolder; font-size: x-large; margin-top: 1ch;">
-            <img src="tiktok-7002866_960_720.webp" style="padding-bottom: 5px;" class="col-lg-2 col-11">
-            TikTok
-        </a>
+    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg" href="https://www.instagram.com/trunganhisheree/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        Instagram
+    </a>
+
+    <div class="col-12">
+        <br>
     </div>
+    <div class="col-0 col-lg-1">
+    </div>
+    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://www.tiktok.com/@trunganhishere">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/986/939/non_2x/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        TikTok
+    </a>
+    <div class="col-12 col-lg-1">
+        <br>
+    </div>
+    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg" href="https://www.youtube.com/channel/UCX2pRomZiaO9L4dqzdqQhug">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/480/small_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        Youtube
+    </a>
+    <div class="col-12 col-lg-1">
+        <br>
+    </div>
+    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://github.com/trunganhishere">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="padding-bottom: 5px;" class="col-lg-2 col-4">
+        Github
+    </a>
 </div>
 <div class="col-12" style="display: flex;
     justify-content: center; color:white">

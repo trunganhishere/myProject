@@ -60,33 +60,39 @@ public class HomeController {
     }
 
     @GetMapping("/infomation")
-    public String infomation(){
+    public String infomation(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
         return "nonUserInfomation";
     }
 
     @GetMapping("/admin/infomation")
-    public String adminInfomation(){
+    public String adminInfomation(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
         return "adminInfomation";
     }
 
     @GetMapping("/user/infomation")
-    public String userInfomation(){
+    public String userInfomation(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
         return "userInfomation";
     }
 
     @GetMapping("/contact")
-    public String contact(){
+    public String contact(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
         return "nonUserContact";
     }
 
     @GetMapping("/admin/contact")
-    public String adminContact(){
-        return "userContact";
+    public String adminContact(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
+        return "adminContact";
     }
 
     @GetMapping("/user/contact")
-    public String userContact(){
-        return "adminContact";
+    public String userContact(Model model){
+        model.addAttribute("infomation",u.getUserSignIn(getUsernameSignIn(),getPasswordSignIn()));
+        return "userContact";
     }
 
     public static String usernameSignIn;

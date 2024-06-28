@@ -17,21 +17,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/user/picture">Picture</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        More
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/user/infomation">Infomation</a></li>
-                        <li><a class="dropdown-item" href="/user/contact">Contact</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/infomation">Infomation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Chào: ${infomation.name}!</a>
                 </li>
             </ul>
-            <a href="/sign-in" class="btn btn-outline-secondary col-2">Sign out</a>
+            <a href="/sign-in" class="btn btn-outline-dark">Sign out</a>
         </div>
     </div>
 </nav>

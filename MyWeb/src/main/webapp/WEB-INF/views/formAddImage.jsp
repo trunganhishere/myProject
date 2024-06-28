@@ -11,16 +11,16 @@
 </head>
 <body class="bg-dark">
 <%@ include file="headerAdmin.jsp" %>
-<form class="shadow-lg p-3 mb-5 bg-body-tertiary rounded col-7" style="margin-top: 12%; margin-left: 23%" action="/admin/picture/add" method="post">
+<form class="shadow-lg p-3 mb-5 bg-body-tertiary rounded col-7" style="margin-top: 12%; margin-left: 23%" action="/admin/picture/<c:if test="${not empty listDetail.id}">update?id=${listDetail.id}</c:if><c:if test="${empty listDetail.id}">add</c:if>" method="post">
     <p class="h1 text-center">ADD IMAGE</p>
     <div class="position-relative mt-3">
         <div class="mb-3 col-6">
             <label for="linkImg" class="form-label" style="margin-left: 50%">Link Image</label>
-            <input type="text" class="form-control" style="margin-left: 50%" id="linkImg" name="linkImg">
+            <input type="text" class="form-control" style="margin-left: 50%" id="linkImg" name="linkImg" value="${listDetail.image}">
         </div>
         <div class="mb-3 col-6">
             <label for="col" class="form-label" style="margin-left: 50%">Width</label>
-            <input type="text" class="form-control" style="margin-left: 50%" id="col" name="col">
+            <input type="text" class="form-control" style="margin-left: 50%" id="col" name="col" value="${listDetail.col}">
         </div>
     </div>
     <div class="position-relative mt-5">
@@ -28,18 +28,45 @@
     </div>
     <br>
 </form>
+
+<table class="bg-white container" style="max-width: 1080px">
+    <thead>
+    <tr>
+        <th>Image</th>
+        <th>Name image</th>
+        <th>Width</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${listImage}" var="a">
+        <tr>
+            <td>
+                <img src="${a.image}" class="w-30">
+            </td>
+            <td>${a.name}</td>
+            <td>${a.col}</td>
+            <td>
+                <a href="/admin/detail-image?id=${a.id}" class="btn btn-info">Show</a>
+                <a href="/admin/picture/delete-image?id=${a.id}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function checkError(){
-            let linkImg = document.getElementById("linkImg").value
-            let col = document.getElementById("col").value
-            if(linkImg === "" || col === ""){
-                alert("Please fill in all fields!")
-                return false;
-            }else {
-                return true;
-            }
+<script>
+    function checkError(){
+        let linkImg = document.getElementById("linkImg").value
+        let col = document.getElementById("col").value
+        if(linkImg === "" || col === ""){
+            alert("Please fill in all fields!")
+            return false;
+        }else {
+            return true;
         }
-    </script>
+    }
+</script>
 </html>

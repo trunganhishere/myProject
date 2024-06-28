@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,16 +52,37 @@ public class ImageController {
     }
 
     @PostMapping("/admin/picture/add")
-    public String addPicture(@RequestParam("linkImg") String linkImg , @RequestParam("col") Integer col, Image i){
-        i.setImage(linkImg);
-        i.setCol(col);
+    public String addPicture(Image i, @RequestParam("linkImg") String image){
+        i.setImage(image);
+        i.setName("main_image");
+        ii.save(i);
+        return "redirect:/admin/picture";
+    }
+
+    @PostMapping("/admin/picture/update")
+    public String updatePicture(Image i, @RequestParam("linkImg") String image){
+        i.setImage(image);
         i.setName("main_image");
         ii.save(i);
         return "redirect:/admin/picture";
     }
 
     @GetMapping("/admin/picture/form/add")
-    public String formAdd(){
+    public String formAdd(Model model){
+        model.addAttribute("listImage",ii.findAll());
+        return "formAddImage";
+    }
+
+    @GetMapping("/admin/picture/delete-image")
+    public String formAdd(@RequestParam("id") Integer id){
+        ii.delete(ii.getReferenceById(id));
+        return "redirect:/admin/picture/form/add";
+    }
+
+    @GetMapping("/admin/detail-image")
+    public String detailImage(@RequestParam("id") Integer id, Model model){
+        model.addAttribute("listDetail",ii.getReferenceById(id));
+        model.addAttribute("listImage",ii.findAll());
         return "formAddImage";
     }
 }

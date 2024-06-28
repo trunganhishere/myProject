@@ -24,8 +24,8 @@
     <br>
     <a style="color: white">Học tại: <a
             class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="https://www.google.com/maps/place/FPT+POLYTECHNIC+C%C6%A1+S%E1%BB%9F+Ki%E1%BB%81u+Mai+Tunzo/@21.0408312,105.7478799,16.75z/data=!4m6!3m5!1s0x313455efa4cf5ec3:0xde9952da2cd8294!8m2!3d21.0408458!4d105.7508744!16s%2Fg%2F11kqw53hbx?entry=ttu">Cao
-        đẳng FPT Polytehnic Kiều Mai</a></a>
+            href="https://caodang.fpt.edu.vn/">
+        Cao đẳng FPT Polytehnic</a></a>
     <br>
     <a style="color: white">Chuyên Ngành: Công nghệ thông tin</a>
     <br>

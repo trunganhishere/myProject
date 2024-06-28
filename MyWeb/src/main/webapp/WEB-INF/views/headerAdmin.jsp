@@ -17,22 +17,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/picture">Picture</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        More
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/admin/infomation">Infomation</a></li>
-                        <li><a class="dropdown-item" href="/admin/contact">Contact</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/infomation">Infomation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Chào: ${infomation.name}!</a>
                 </li>
             </ul>
-            <a href="/admin/picture/form/add" class="btn btn-outline-secondary col-1" style="margin-right: 2%">Add image</a>
-            <a href="/sign-in" class="btn btn-outline-dark col-2">Sign out</a>
+            <a href="/admin/picture/form/add" class="btn btn-outline-secondary" style="margin-right: 2%">Add image</a>
+            <a href="/sign-in" class="btn btn-outline-dark">Sign out</a>
         </div>
     </div>
 </nav>
