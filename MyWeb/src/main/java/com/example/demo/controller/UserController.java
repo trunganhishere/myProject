@@ -34,7 +34,7 @@ public class UserController {
         model.addAttribute("myInfomation",u.getReferenceById(1));
         model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
         model.addAttribute("homeImage",ii.findByName("home_image"));
-        return "nonUserHome";
+        return "index";
     }
 
     @GetMapping("/admin/home")

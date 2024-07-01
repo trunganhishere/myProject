@@ -32,6 +32,7 @@ public class ImageController {
         model.addAttribute("myInfomation",u.getReferenceById(1));
         model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
         model.addAttribute("mainImage",ii.findByName("main_image"));
+        model.addAttribute("achievementImage",ii.findByName("achievement_image"));
         return "adminPicture";
     }
 
@@ -40,6 +41,7 @@ public class ImageController {
         model.addAttribute("myInfomation",u.getReferenceById(1));
         model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
         model.addAttribute("mainImage",ii.findByName("main_image"));
+        model.addAttribute("achievementImage",ii.findByName("achievement_image"));
         return "userPicture";
     }
 
@@ -48,23 +50,24 @@ public class ImageController {
         model.addAttribute("myInfomation",u.getReferenceById(1));
         model.addAttribute("infomation",u.getUserSignIn(hc.getUsernameSignIn(),hc.getPasswordSignIn()));
         model.addAttribute("mainImage",ii.findByName("main_image"));
+        model.addAttribute("achievementImage",ii.findByName("achievement_image"));
         return "nonUserPicture";
     }
 
     @PostMapping("/admin/picture/add")
-    public String addPicture(Image i, @RequestParam("linkImg") String image){
+    public String addPicture(Image i, @RequestParam("linkImg") String image, @RequestParam("nameImage") String name){
         i.setImage(image);
-        i.setName("main_image");
+        i.setName(name);
         ii.save(i);
-        return "redirect:/admin/picture";
+        return "redirect:/admin/picture/form/add";
     }
 
     @PostMapping("/admin/picture/update")
-    public String updatePicture(Image i, @RequestParam("linkImg") String image){
+    public String updatePicture(Image i, @RequestParam("linkImg") String image, @RequestParam("nameImage") String name){
         i.setImage(image);
-        i.setName("main_image");
+        i.setName(name);
         ii.save(i);
-        return "redirect:/admin/picture";
+        return "redirect:/admin/picture/form/add";
     }
 
     @GetMapping("/admin/picture/form/add")

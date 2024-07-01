@@ -19,8 +19,12 @@
             <input type="text" class="form-control" style="margin-left: 50%" id="linkImg" name="linkImg" value="${listDetail.image}">
         </div>
         <div class="mb-3 col-6">
-            <label for="col" class="form-label" style="margin-left: 50%">Width</label>
-            <input type="text" class="form-control" style="margin-left: 50%" id="col" name="col" value="${listDetail.col}">
+            <label class="form-label" style="margin-left: 50%">Name Image</label>
+            <select name="nameImage" style="margin-left: 50%" class="form-select" aria-label="Default select example">
+                <option value="main_image" ${listDetail.name=="main_image"?"selected":""}>Main Image</option>
+                <option value="home_image" ${listDetail.name=="home_image"?"selected":""}>Home Image</option>
+                <option value="achievement_image" ${listDetail.name=="achievement_image"?"selected":""}>Achievement Image</option>
+            </select>
         </div>
     </div>
     <div class="position-relative mt-5">
@@ -32,7 +36,7 @@
 <table class="bg-white container" style="max-width: 1080px">
     <thead>
     <tr>
-        <th>Image</th>
+        <th style="width: 50%">Image</th>
         <th>Name image</th>
         <th>Width</th>
         <th>Action</th>
@@ -42,7 +46,7 @@
     <c:forEach items="${listImage}" var="a">
         <tr>
             <td>
-                <img src="${a.image}" class="w-30">
+                <img src="${a.image}" style="width: 50%">
             </td>
             <td>${a.name}</td>
             <td>${a.col}</td>
