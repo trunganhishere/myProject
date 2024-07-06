@@ -57,7 +57,7 @@
                 <a href="https://www.google.com/maps/place/Thanh+Oai,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@20.85998,105.6167332,11z/data=!3m1!4b1!4m6!3m5!1s0x3135b334a644bd6d:0xf61a39318daee561!8m2!3d20.8532165!4d105.7688513!16s%2Fm%2F03mcrrh?entry=ttu"
                    class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
                     Thanh Oai -
-                    Ha Noi</a></p>
+                    Hà Nội</a></p>
         </div>
         <div class="col-6 col-xl-4" style="text-align: center;"><a>Phone number: ${myInfomation.phoneNumber}</a>
         </div>

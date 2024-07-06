@@ -34,31 +34,31 @@
     </div>
     <div class="position-relative mt-5">
         <button class="btn btn-success position-absolute top-100 start-50 translate-middle col-5"
-                onclick="return checkNull()">Submit
+                onclick="return checkError()">Submit
         </button>
     </div>
     <br>
 </form>
 
-<table class="bg-white container" style="max-width: 1080px">
+<table class="bg-white container table table-hover" style="max-width: 1080px">
     <thead>
     <tr>
         <th style="width: 50%">Image</th>
         <th>Name image</th>
-        <th>Width</th>
+<%--        <th>Width</th>--%>
         <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${listImage}" var="a">
-        <tr>
+        <tr onclick="return location.href='/admin/detail-image?id=${a.id}'">
             <td>
                 <img src="${a.image}" style="width: 50%">
             </td>
             <td>${a.name}</td>
-            <td>${a.col}</td>
+<%--            <td>${a.col}</td>--%>
             <td>
-                <a href="/admin/detail-image?id=${a.id}" class="btn btn-info">Show</a>
+<%--                <a href="/admin/detail-image?id=${a.id}" class="btn btn-info">Show</a>--%>
                 <a href="/admin/picture/delete-image?id=${a.id}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
@@ -71,8 +71,7 @@
 <script>
     function checkError() {
         let linkImg = document.getElementById("linkImg").value
-        let col = document.getElementById("col").value
-        if (linkImg === "" || col === "") {
+        if (linkImg === "") {
             alert("Please fill in all fields!")
             return false;
         } else {

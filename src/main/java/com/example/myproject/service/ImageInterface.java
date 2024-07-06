@@ -12,4 +12,7 @@ import java.util.ArrayList;
 public interface ImageInterface extends JpaRepository<Image, Integer> {
     @Query("select i from Image i where i.name = :name ORDER BY i.id DESC")
     ArrayList<Image> findByName(String name);
+
+    @Query("select i from Image i ORDER BY i.id DESC")
+    ArrayList<Image> getAll();
 }

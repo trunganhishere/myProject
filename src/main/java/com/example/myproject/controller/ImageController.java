@@ -9,10 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 @Controller
@@ -58,6 +55,9 @@ public class ImageController {
     public String addPicture(Image i, @RequestParam("linkImg") String image, @RequestParam("nameImage") String name) {
         i.setImage(image);
         i.setName(name);
+        Random random = new Random();
+        int randomNumber = 3 + random.nextInt(9);
+        i.setCol(randomNumber);
         ii.save(i);
         return "redirect:/admin/picture/form/add";
     }
@@ -72,7 +72,8 @@ public class ImageController {
 
     @GetMapping("/admin/picture/form/add")
     public String formAdd(Model model) {
-        model.addAttribute("listImage", ii.findAll());
+        model.addAttribute("listImage", ii.getAll());
+        model.addAttribute("infomation", u.getUserSignIn(hc.getUsernameSignIn(), hc.getPasswordSignIn()));
         return "formAddImage";
     }
 
