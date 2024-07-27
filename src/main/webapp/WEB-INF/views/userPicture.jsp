@@ -13,7 +13,7 @@
     <a style="color:white ;font-size: 300%; font-weight: bold;">Picture</a>
 </div>
 <div style="display: flex; justify-content: center; padding-top: 3%;">
-    <div class=" col-11 col-lg-10" style="padding-left: 5%;">
+    <div class=" col-11 col-lg-8" style="padding-left: 5%;">
         <c:forEach items="${mainImage}" var="a">
             <c:forEach items="${achievementImage}" var="a">
                 <img src="${a.image}" class="col-12 img-fluid" style="border: white 3px solid ; border-radius:2%"

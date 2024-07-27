@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid text-center" style="padding-top: 2%;">
     <a style="color:white ;font-size: 300%; font-weight: bold;">Home</a>
 </div>

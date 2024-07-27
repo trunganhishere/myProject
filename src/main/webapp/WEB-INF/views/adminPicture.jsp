@@ -14,7 +14,7 @@
 </div>
 <div style="display: flex; justify-content: center; padding-top: 3%;">
 
-    <div class=" col-11 col-lg-10" style="padding-left: 5%;">
+    <div class=" col-11 col-lg-8" style="padding-left: 5%;">
         <c:forEach items="${achievementImage}" var="a">
             <img src="${a.image}" class="col-12 img-fluid" style="border: white 3px solid ; border-radius:2%"
                  data-bs-toggle="modal" data-bs-target="#exampleModal${a.id}">
