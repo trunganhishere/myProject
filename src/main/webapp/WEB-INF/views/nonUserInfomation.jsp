@@ -38,9 +38,7 @@
     <a style="color: white">Số chủ đạo: <a style="text-decoration: none; color: white;"
                                            href="https://cellphones.com.vn/sforum/than-so-hoc-so-8">số 8</a></a>
     <br>
-    <a style="color: white">Sở thích: Nghe nhạc, chơi game, đi chơi</a>
-    <br>
-    <a style="color: white">Thích chó, mèo</a>
+    <a style="color: white">Sở thích: Học, nghe nhạc, đi chơi, chó, mèo</a>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -39,8 +39,11 @@ public class HomeController {
 
     @GetMapping("/checking")
     public String signUp(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
-        for (int i = 0; i < u.findAll().size(); i++) {
-            User user = u.findAll().get(i);
+            User user = u.getUserSignIn(username, password);
+            if (user == null){
+                model.addAttribute("error", "Account or password is incorrect!");
+                return "signIn";
+            }
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 System.out.println("Đăng nhập thành công");
                 usernameSignIn = username;
@@ -54,7 +57,6 @@ public class HomeController {
                     return "signIn";
                 }
             }
-        }
         model.addAttribute("error", "Account or password is incorrect!");
         return "signIn";
     }

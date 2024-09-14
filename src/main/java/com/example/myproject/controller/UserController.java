@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Controller
@@ -54,12 +53,10 @@ public class UserController {
 
     @PostMapping("user/add")
     public String addUser(User user, Model model) {
-        for (int i = 0; i < u.findAll().size(); i++) {
-            if (user.getUsername().equals(u.findAll().get(i).getUsername())) {
+            if (u.getUserByUsername(user.getUsername()) != null) {
                 model.addAttribute("error", "Username invalid");
                 return "signUp";
             }
-        }
         user.setNgayTao(new Date());
         user.setRole(r.getReferenceById(2));
         u.save(user);

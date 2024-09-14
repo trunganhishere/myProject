@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface UserInterface extends JpaRepository<User, Integer> {
     @Query("select u from User u where u.username = :username and u.password = :password")
     User getUserSignIn(String username, String password);
+    @Query("select u from User u where u.username = :username")
+    User getUserByUsername(String username);
 }
