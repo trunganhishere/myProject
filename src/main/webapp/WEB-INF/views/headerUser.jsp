@@ -27,7 +27,7 @@
                     <a class="nav-link disabled" aria-disabled="true">Chào: ${infomation.name}!</a>
                 </li>
             </ul>
-            <a href="/sign-in" class="btn btn-outline-dark">Sign out</a>
+<%--            <a href="/sign-in" class="btn btn-outline-dark">Sign out</a>--%>
         </div>
     </div>
 </nav>

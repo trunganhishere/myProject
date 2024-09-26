@@ -15,7 +15,7 @@
 <div class="container row" style="justify-content: center;display: flex;">
     <div class="col-0 col-lg-1">
     </div>
-    <a class="btn btn-outline-primary col-10 col-lg-3 btn-lg" href="https://www.facebook.com/trunganhishere">
+    <a class="btn btn-outline-primary col-10 col-lg-3 btn-lg" href="https://www.facebook.com/trunganhishere" target="_blank">
         <img src="https://freepnglogo.com/images/all_img/1713419166FB_Logo_PNG.png" style="padding-bottom: 5px;"
              class="col-lg-2 col-4">
         Facebook
@@ -23,7 +23,7 @@
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <a class="btn btn-outline-success col-10 col-lg-3 btn-lg" href="http://m.me/trunganhishere">
+    <a class="btn btn-outline-success col-10 col-lg-3 btn-lg" href="http://m.me/trunganhishere" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/640px-Facebook_Messenger_logo_2020.svg.png"
              style="padding-bottom: 5px;" class="col-lg-2 col-4">
         Messenger
@@ -32,7 +32,7 @@
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg" href="https://www.instagram.com/trunganhisheree/">
+    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg" href="https://www.instagram.com/trunganhisheree/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
              style="padding-bottom: 5px;" class="col-lg-2 col-4">
         Instagram
@@ -43,7 +43,7 @@
     </div>
     <div class="col-0 col-lg-1">
     </div>
-    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://www.tiktok.com/@trunganhishere">
+    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://www.tiktok.com/@trunganhishere" target="_blank">
         <img src="https://static.vecteezy.com/system/resources/previews/023/986/939/non_2x/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.png"
              style="padding-bottom: 5px;" class="col-lg-2 col-4">
         TikTok
@@ -51,8 +51,7 @@
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg"
-       href="https://www.youtube.com/channel/UCX2pRomZiaO9L4dqzdqQhug">
+    <a class="btn btn-outline-danger col-10 col-lg-3 btn-lg" href="https://www.youtube.com/channel/UCX2pRomZiaO9L4dqzdqQhug" target="_blank">
         <img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/480/small_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png"
              style="padding-bottom: 5px;" class="col-lg-2 col-4">
         Youtube
@@ -60,7 +59,7 @@
     <div class="col-12 col-lg-1">
         <br>
     </div>
-    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://github.com/trunganhishere">
+    <a class="btn btn-outline-light col-10 col-lg-3 btn-lg" href="https://github.com/trunganhishere" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="padding-bottom: 5px;"
              class="col-lg-2 col-4">
         Github

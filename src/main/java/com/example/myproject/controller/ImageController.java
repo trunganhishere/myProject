@@ -9,8 +9,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.util.Random;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Controller
 public class ImageController {
@@ -52,14 +58,16 @@ public class ImageController {
     }
 
     @PostMapping("/admin/picture/add")
-    public String addPicture(Image i, @RequestParam("linkImg") String image, @RequestParam("nameImage") String name) {
-        i.setImage(image);
-        i.setName(name);
-        Random random = new Random();
-        int randomNumber = 3 + random.nextInt(9);
-        i.setCol(randomNumber);
-        ii.save(i);
-        return "redirect:/admin/picture/form/add";
+    public String addPicture(Image i, @RequestParam("linkImg") String image, @RequestParam("nameImage") String name, Model model) {
+        if(image.trim().isEmpty() || name.trim().isEmpty()){
+            model.addAttribute("error","Vui lòng điền đủ trường!");
+            return "formAddImage";
+        }else {
+            i.setImage(image);
+            i.setName(name);
+            ii.save(i);
+            return "redirect:/admin/picture/form/add";
+        }
     }
 
     @PostMapping("/admin/picture/update")
@@ -86,7 +94,7 @@ public class ImageController {
     @GetMapping("/admin/detail-image")
     public String detailImage(@RequestParam("id") Integer id, Model model) {
         model.addAttribute("listDetail", ii.getReferenceById(id));
-        model.addAttribute("listImage", ii.findAll());
+        model.addAttribute("listImage", ii.getAll());
         return "formAddImage";
     }
 }

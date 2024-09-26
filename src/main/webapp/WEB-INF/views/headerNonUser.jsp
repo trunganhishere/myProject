@@ -27,7 +27,7 @@
                     <a class="nav-link disabled" aria-disabled="true">Chào!</a>
                 </li>
             </ul>
-            <a href="/sign-in" class="btn btn-outline-dark">Sign in</a>
+            <a href="/admin/home" class="btn btn-outline-dark">Sign in</a>
         </div>
     </div>
 </nav>
